@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Digital Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="title">Calculator</h1>
+  <div class="mode-toggle">
+    <button onclick="toggleMode()">Switch Mode</button>
+    <span id="mode-label">Standard</span>
+    <button onclick="toggleTheme()">🌙/☀️</button>
+  </div>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <button id="voiceBtn" title="Speak a calculation">🎙️</button>
+
+    <div class="memory-buttons">
+      <button class="btn" onclick="memoryStore()">M+</button>
+      <button class="btn" onclick="memoryRecall()">MR</button>
+      <button class="btn" onclick="memoryClear()">MC</button>
+      <button class="btn" onclick="memorySubtract()">M-</button>
+
+
+    </div>
+    <div class="buttons">
+      <button class="btn" onclick="append('(')">(</button>
+      <button class="btn" onclick="append(')')">)</button>
+      <button class="btn" onclick="append('%')">%</button>
+      <button class="btn" onclick="clearDisplay()">C</button>
+
+      <button class="btn" onclick="append('7')">7</button>
+      <button class="btn" onclick="append('8')">8</button>
+      <button class="btn" onclick="append('9')">9</button>
+      <button class="btn" onclick="append('/')">/</button>
+
+      <button class="btn" onclick="append('4')">4</button>
+      <button class="btn" onclick="append('5')">5</button>
+      <button class="btn" onclick="append('6')">6</button>
+      <button class="btn" onclick="append('*')">*</button>
+
+      <button class="btn" onclick="append('1')">1</button>
+      <button class="btn" onclick="append('2')">2</button>
+      <button class="btn" onclick="append('3')">3</button>
+      <button class="btn" onclick="append('-')">-</button>
+
+      <button class="btn" onclick="append('0')">0</button>
+      <button class="btn" onclick="append('.')">.</button>
+      <button class="btn" onclick="calculate()">=</button>
+      <button class="btn" onclick="append('+')">+</button>
+
+      <button class="btn" onclick="backspace()">⌫</button>
+    </div>
+    <div class="sci-buttons" id="sci-buttons">
+      <button class="btn" onclick="scientific('Math.sin')">sin</button>
+      <button class="btn" onclick="scientific('Math.cos')">cos</button>
+      <button class="btn" onclick="scientific('Math.tan')">tan</button>
+      <button class="btn" onclick="scientific('Math.log10')">log</button>
+
+      <button class="btn" onclick="scientific('Math.log')">ln</button>
+      <button class="btn" onclick="scientific('Math.sqrt')">√</button>
+      <button class="btn" onclick="power()">x²</button>
+      <button class="btn" onclick="append('Math.PI')">π</button>
+
+      <button class="btn" onclick="append('Math.E')">e</button>
+      <button class="btn" onclick="append('**')">^</button>
+    </div>
+    <div class="history">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
